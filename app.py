@@ -17,7 +17,6 @@ tickerData = yf.Ticker(tickerSymbol)
 
 #get historical prices
 tickerDf = tickerData.history(period='1d', start='2012-5-31', end='2022-5-31')
-#Data: Open, High, Low, Close, Volume, Dividends, Stock Splits
 
 st.line_chart(tickerDf.Close)
 st.line_chart(tickerDf.Volume)
