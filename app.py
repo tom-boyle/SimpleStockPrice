@@ -5,18 +5,18 @@ import yfinance as yf
 st.write("""
 # Simple Stock Price App
 
-Shown are the stock **closing price** and **volume** of Google!
+Shown are the stock **closing price** and **volume** of Meta!
 
 """)
 
 #define the ticker
-tickerSymbol = 'GOOGL'
+tickerSymbol = 'META'
 
 #get data on the ticker
 tickerData = yf.Ticker(tickerSymbol)
 
 #get historical prices
-tickerDf = tickerData.history(period='1d', start='2010-5-31', end='2020-5-31')
+tickerDf = tickerData.history(period='1d', start='2012-5-31', end='2022-5-31')
 #Data: Open, High, Low, Close, Volume, Dividends, Stock Splits
 
 st.line_chart(tickerDf.Close)
